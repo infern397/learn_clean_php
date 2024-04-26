@@ -12,7 +12,7 @@ class Images extends BaseController {
     function item(int $index)
     {
         $item = Image::get_image($index);
-        $ctx = ['item' => $item];
+        $ctx = ['item' => $item, 'site_title' => $item['desc']];
         $this->render('item', $ctx);
     }
 }
