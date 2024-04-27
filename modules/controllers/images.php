@@ -5,7 +5,7 @@ use Models\Image;
 class Images extends BaseController {
     function list()
     {
-        $ctx = ['cnt' => Image::get_count()];
+        $ctx = ['list' => new \Models\Image()];
         $this->render('list', $ctx);
     }
 
